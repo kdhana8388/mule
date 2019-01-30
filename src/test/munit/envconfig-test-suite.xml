@@ -10,7 +10,7 @@
 	<munit:config name="envconfig-test-suite.xml" />
 	<munit:test name="envconfig-test-suite-envconfigFlowTest" description="Test" doc:id="9b23d54a-658a-42a8-bccb-f817da8e9642" >
 		<munit:execution >
-			<flow-ref doc:name="Flow-ref to envconfigFlow" doc:id="9bb170f7-d28e-4584-892d-f43b786c5f5b" name="envconfigFlow"/>
+			<flow-ref doc:name="envconfigFlow" doc:id="9bb170f7-d28e-4584-892d-f43b786c5f5b" name="envconfigFlow"/>
 		</munit:execution>
 	</munit:test>
 
