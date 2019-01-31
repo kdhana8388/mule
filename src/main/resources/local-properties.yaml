@@ -1,2 +1,2 @@
 http:
-  port: ${http.port}
+  port: "${port}"

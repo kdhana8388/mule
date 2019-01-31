@@ -16,11 +16,17 @@
 		<app.runtime>4.1.5</app.runtime>
 		<mule.maven.plugin.version>3.1.6</mule.maven.plugin.version>
 	<munit.version>2.1.4</munit.version>
-	<http.port>8081</http.port>
-    </properties>
-    
-
-	<build>
+	</properties>
+   	<build>
+	<resources>
+	<resource>
+        <directory>src/main/resources</directory>
+         <filtering>true</filtering>
+        <includes>
+            <include>local-properties.yaml</include>
+        </includes>
+    </resource>
+</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
@@ -28,16 +34,15 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-				<properties>
-                 
-                 </properties>
+				
 				</configuration>
 			</plugin>
-		<plugin>
+			<plugin>
                 <groupId>com.mulesoft.munit.tools</groupId>
                 <artifactId>munit-maven-plugin</artifactId>
                 <version>${munit.version}</version>
                 <executions>
+                
                     <execution>
                         <id>test</id>
                         <phase>test</phase>
@@ -57,17 +62,7 @@
                 </configuration>
             </plugin>
         </plugins>
-        <resources>
-    <resource>
-        <directory>src/main/resources</directory>
-        <filtering>true</filtering>
-        <includes>
-            <include>settings.properties</include>
-        </includes>
-    </resource>
-</resources>
-
-	</build>
+          	</build>
 	
 
 	<dependencies>
@@ -123,5 +118,6 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
+    
 
 </project>
